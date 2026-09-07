@@ -8,3 +8,5 @@ headers = ["symboling", "normalized-losses", "make", "fuel-type", "aspiration", 
            "stroke", "compression-ratio", "horsepower", "peak-rpm", "city-mpg", "highway-mpg", "price"]
 df.columns = headers
 df.to_csv("automobile_dataset_with_headers.csv", index=False)
+
+print(df.head(3))
