@@ -10,3 +10,11 @@ df.columns = headers
 df.to_csv("automobile_dataset_with_headers.csv", index=False)
 
 print(df.head(3))
+print("\n checking the Dataflow type \n")
+print(df.dtypes)
+print("\n checking statistical summary \n")
+print(df.describe())
+print("\n concise summary of the data frame \n")
+print(df.info())
+print("\n Full summary \n")
+print(df.describe(include = "all"))
