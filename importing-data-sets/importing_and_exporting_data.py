@@ -20,3 +20,5 @@ print("\n concise summary of the data frame \n")
 print(df.info())
 print("\n Full summary \n")
 print(df.describe(include = "all"))
+
+print(df[['length', 'compression-ratio']].describe())
