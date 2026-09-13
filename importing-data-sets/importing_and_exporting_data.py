@@ -9,6 +9,8 @@ headers = ["symboling", "normalized-losses", "make", "fuel-type", "aspiration", 
 df.columns = headers
 df.to_csv("automobile_dataset_with_headers.csv", index=False)
 
+print(df.tail(2))
+
 print(df.head(3))
 print("\n checking the Dataflow type \n")
 print(df.dtypes)
