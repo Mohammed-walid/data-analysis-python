@@ -23,7 +23,14 @@ print(df.head())
 #Task 3: Replace '?' with 'NaN'
 df.replace('?',np.nan, inplace = True)
 
+#Task 4: Print the data types of the dataframe columns
+print(df.dtypes)
 
+#Task 5: Print the statistical description of the dataset, including that of 'object' data types
+print(df.describe(include="all"))
+
+#Task #6: Print the summary information of the dataset.
+print(df.info())
 
 
 
