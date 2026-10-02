@@ -12,7 +12,9 @@ if response.status_code == 200:
         f.write(response.content)
 
 
-
+#TASK 1: Load the dataset to a pandas dataframe named 'df'
+df = pd.read_csv("Laptop-pricing.csv", header = None)
+print(df.head())
 
 
 
