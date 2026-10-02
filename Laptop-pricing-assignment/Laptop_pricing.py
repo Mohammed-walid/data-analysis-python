@@ -16,5 +16,14 @@ if response.status_code == 200:
 df = pd.read_csv("Laptop-pricing.csv", header = None)
 print(df.head())
 
+#TASK 2: Add headers to the dataframe
+df.columns =  ["Manufacturer", "Category", "Screen", "GPU", "OS", "CPU_core", "Screen_Size_inch", "CPU_frequency", "RAM_GB", "Storage_GB_SSD", "Weight_kg", "Price"]
+print(df.head())
+
+#Task 3: Replace '?' with 'NaN'
+df.replace('?',np.nan, inplace = True)
+
+
+
 
 
