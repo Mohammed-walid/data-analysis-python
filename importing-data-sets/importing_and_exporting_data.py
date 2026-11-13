@@ -1,5 +1,6 @@
 """working with data module"""
 import pandas as pd
+import numpy as np
 url = "https://archive.ics.uci.edu/ml/machine-learning-databases/autos/imports-85.data"
 df = pd.read_csv(url, header = None)
 headers = ["symboling", "normalized-losses", "make", "fuel-type", "aspiration", "num-of-doors", "body-style",
@@ -22,3 +23,8 @@ print("\n Full summary \n")
 print(df.describe(include = "all"))
 
 print(df[['length', 'compression-ratio']].describe())
+
+#To drop missing values with will use dropna, since missing values can be Nan, or ? or blank
+df.replace("?", np.nan, inplace=True) # we replaced all ? values to nan
+df.dropna(axis = 0, inplace = True)
+print(df)
