@@ -28,3 +28,13 @@ print(df[['length', 'compression-ratio']].describe())
 df.replace("?", np.nan, inplace=True) # we replaced all ? values to nan
 df.dropna(axis = 0, inplace = True)
 print(df)
+
+#instead of deleting missing values we will replace them using the mean
+df["horsepower"].replace(
+    np.nan,
+    df["horsepower"].mean(),
+    inplace=True
+)
+
+print("\n Full summary modified\n")
+print(df.describe(include = "all"))
