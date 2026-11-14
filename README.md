@@ -9,7 +9,6 @@ This repository contains my coursework, labs, and projects for the **Data Analys
 * **Data Visualization:** Matplotlib, Seaborn
 * **Statistical Analysis:** SciPy
 * **Machine Learning:** Scikit-learn
-* **Environment:** Jupyter Notebook
 * **Database:** SQLite
 
 ## 📂 Repository Structure
