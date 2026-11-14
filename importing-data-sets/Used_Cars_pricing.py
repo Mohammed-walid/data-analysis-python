@@ -10,7 +10,7 @@ headers = ["symboling", "normalized-losses", "make", "fuel-type", "aspiration", 
            "curb-weight", "engine-type", "num-of-cylinders", "engine-size", "fuel-system", "bore",
            "stroke", "compression-ratio", "horsepower", "peak-rpm", "city-mpg", "highway-mpg", "price"]
 df.columns = headers
-df.to_csv("automobile_dataset_with_headers.csv", index=False)
+df.to_csv("used_car_prices.csv", index=False)
 
 print(df.tail(2))
 
