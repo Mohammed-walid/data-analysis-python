@@ -26,6 +26,18 @@ print(df[['length', 'compression-ratio']].describe())
 
 #To drop missing values with will use dropna, since missing values can be Nan, or ? or blank
 df.replace("?", np.nan, inplace=True) # we replaced all ? values to nan
+print(df.head())
+
+# isnull() replaces each element in the table to true if null and false if not null
+missing_values_table = df.isnull()
+
+#now we will count the number of missing values
+for column in missing_values_table.columns.values.tolist(): #columns.values.tolist() get the name of all columnns and puts it into a list
+    print(column)
+    print(missing_values_table[column].value_counts()) #Selects one column from the DataFrame.
+    #Counts how many times each value appears.
+    print("")
+
 df.dropna(axis = 0, inplace = True)
 print(df)
 
