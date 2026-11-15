@@ -1,4 +1,4 @@
-"""working with data module"""
+"""working with data module and applied and pre-processing data"""
 import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt

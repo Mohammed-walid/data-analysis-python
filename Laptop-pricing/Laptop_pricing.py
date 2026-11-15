@@ -1,4 +1,4 @@
-"""A small assignment on Importing Datasets"""
+"""A small assignment on Importing Datasets, and pre-processing data"""
 
 import pandas as pd
 import numpy as np
