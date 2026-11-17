@@ -21,28 +21,28 @@ weight_pounds = df["Weight_pounds"]
 screen_size_inch = df["Screen_Size_inch"]
 CPU_frequency = df["CPU_frequency"]
 sns.regplot(x = weight_pounds, y = price)
-#plt.show()
+plt.show()
 sns.regplot(x = screen_size_inch, y = price)
-#plt.show()
+plt.show()
 sns.regplot(x = CPU_frequency, y = price)
-#plt.show()
+plt.show()
 
 for i in ["Weight_pounds", "Screen_Size_inch", "CPU_frequency"]:
     print(f"The Correlation of price and {i} is \n", df[[i,"Price"]].corr())
 
 #Box plot
 sns.boxplot(x = "Category", y = "Price", data = df)
-#plt.show()
+plt.show()
 sns.boxplot(x = "GPU", y = "Price", data = df)
-#plt.show()
+plt.show()
 sns.boxplot(x = "OS", y = "Price", data = df)
-#plt.show()
+plt.show()
 sns.boxplot(x = "CPU_core", y = "Price", data = df)
-#plt.show()
+plt.show()
 sns.boxplot(x = "RAM_GB", y = "Price", data = df)
-#plt.show()
+plt.show()
 sns.boxplot(x = "Storage_GB_SSD", y = "Price", data = df)
-#plt.show()
+plt.show()
 
 print("Descriptive Statistical Analysis \n", df.describe())
 print("Descriptive Statistical Analysis With Object DataType Included \n", df.describe(include = ["object"]))
@@ -69,3 +69,8 @@ ax.set_xticklabels(row_labels, minor=False)
 ax.set_yticklabels(col_labels, minor=False)
 
 fig.colorbar(im)
+
+for i in ['RAM_GB', 'CPU_frequency', 'Storage_GB_SSD', 'Screen_Size_inch', 'Weight_pounds', 'CPU_core', 'OS', 'GPU', 'Category']:
+    pearson_coef, p_value = stats.pearsonr(df[i], df['Price'])
+    print(i)
+    print("The Pearson Correlation Coefficient for ", i, " is", pearson_coef, " with a P-value of P =", p_value)
